@@ -52,6 +52,12 @@
         line-height: 30px;
         color: white;
       }
+
+    .modal-dialog-default {
+        width: 1000px;
+        margin: 30px auto;
+    }
+
 </style>
   <script>
 
@@ -631,7 +637,7 @@
                 <div class="pull-left">
                   <a href="./pages/examples/lockscreen.html" class="btn btn-default btn-flat">Lock Screen</a>
                 </div>
-                
+
                 <div class="pull-right">
                   <a href="index.html" class="btn btn-default btn-flat">Log Out</a>
                 </div>
@@ -704,7 +710,7 @@
         <li><a href="#" data-toggle="modal" data-target="#modal-primary1"><i class="fa fa-circle-o text-aqua"></i> <span>Semi-Digitizability (Semi Manual)</span></a></li>
         <li><a href="#" data-toggle="modal" data-target="#modal-info"><i class="fa fa-circle-o text-red"></i> <span>Non-Digitizability Statements</span></a></li>
 
-        <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li><a href="#"  data-toggle="modal" data-target="#modal-default"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -1038,6 +1044,97 @@
           </div>
           <!-- /.modal-dialog -->
         </div>
+
+        <div class="modal fade" id="modal-default">
+          <div class="modal-dialog-default">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Documentation</h4>
+              </div>
+              <div class="modal-body">
+                <table class="table" id="regtechtabledanger">
+                  <thead>
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th style="width: 1000px">Statements</th>
+                    <th style="width: 150px">Digitizablity Level</th>
+                    <th style="width: 250px">Rules</th>
+                  </tr>
+                </thead>
+                  <tr>
+                    <td>1</td>
+                    <td>The Borrower <u>declares</u> that the information and data <u>furnished</u> by it to the Lender are true and correct.</td>
+                    <td>Non-Digitizable	</td>
+                    <td>(VBZ || VBN)</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>The Borrower <u>shall</u> utilise the said Loan only for the purpose as <u>stated</u> in the registration and the loan <u>shall<u> not be <u>utilised</u> for any other purpose.</td>
+                    <td>Semi-Digitizable (Human-Driven - Human-Triggered)</td>
+                    <td>(VBZ || VBN) && (MD)</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>The Borrower <u>shall</u> intimate the purpose for which it <u>is</u> desirous of utilising this loan amount.</td>
+                    <td>Semi-Digitizable (Human-Driven - Human-Triggered)</td>
+                    <td>(VBZ || VBN) && (MD)</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>The Loan carry interest rates agreed in terms of Schedule I to this Loan Agreement.</td>
+                    <td>Digitizable	</td>
+                    <td>NOT ((VBZ || VBN) && (MD))</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>The Borrower pay the interest along with the principle and penal interest of penalties on 10th of every month from loan starting date.</td>
+                    <td>Digitizable	</td>
+                    <td>NOT ((VBZ || VBN) && (MD))</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Any default by the Borrower in payment for dues towards interest or principle demand an additional interest charge of 24% on the entire Loan.</td>
+                    <td>Digitizable	</td>
+                    <td>NOT ((VBZ || VBN) && (MD))</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>The Borrower <u>agrees</u> to accept the statement of account send by the Lender or by any other authorized representative of the Lender as conclusive proof of the correctness of any such claim to be due from him.</td>
+                    <td>Non-Digitizable	</td>
+                    <td>(VBZ || VBN)</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>The Loan <u>shall</u> be <u>disbursed</u> by the Lender to the Borrower within a period of 7 (seven) days from the date of execution of this Agreement.</td>
+                    <td>Semi-Digitizable (Human-Driven - Human-Triggered)</td>
+                    <td>(VBZ || VBN) && (MD)</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>The Borrower <u>shall</u> pay the interest as per the Schedule 1, in case, if the borrower missed to pay the interest then the Lender <u>can</u> send a notification.</td>
+                    <td>Semi-Digitizable (Automatic - Human-Triggered)</td>
+                    <td>(VB) && (MD)</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>This Agreement <u>shall</u> be <u>governed</u> by and <u>construed</u> in all respect with the Indian Laws and any matter or issues arising hereunder or any dispute hereunder <u>shall</u> be subject to the jurisdiction of the Courts of the City of Delhi in India.</td>
+                    <td>Semi-Digitizable (Human-Driven - Human-Triggered)</td>
+                    <td>(VBZ || VBN) && (MD)</td>
+                  </tr>
+
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
